@@ -27,12 +27,12 @@ VALUES
 
 INSERT INTO Tracks (track_ID, name_track, duration, album_ID)
 VALUES
-(1, 'Roors In My Boots', 3.17, 1),
-(2, 'Freedom', 3.8, 2),
-(3, 'Venom', 4.31, 3)
-(4, 'Paul', 0.35, 3),
-(5, 'Мой стиль', 4.16, 4),
-(6, 'Моя игра', 5,25, 4);
+(1, 'Roors In My Boots', 197, 1),
+(2, 'Freedom', 188, 2),
+(3, 'Venom', 271, 3)
+(4, 'Paul', 35, 3),
+(5, 'Мой стиль', 256, 4),
+(6, 'Моя игра', 325, 4);
 
 INSERT INTO Collections (collection_ID, name_collection, release_year)
 VALUES
