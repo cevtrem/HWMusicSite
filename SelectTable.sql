@@ -9,7 +9,7 @@ LIMIT 1;
 --Название треков, продолжительность которых не менее 3,5 минут.
 SELECT name_track
 FROM Tracks
-WHERE duration >= 190;
+WHERE duration >= 210;
 
 --Названия сборников, вышедших в период с 2018 по 2020 год включительно.
 SELECT name_collection
@@ -17,12 +17,22 @@ FROM Collections
 WHERE release_year BETWEEN 2018 AND 2020;
 
 --Исполнители, чьё имя состоит из одного слова.
-SELECT 
+SELECT name_artist
+FROM Artists
+WHERE name_artist NOT LIKE '% %';
 
 --Название треков, которые содержат слово «мой» или «my».
 SELECT name_track
-FROM Tracks
-WHERE name_track LIKE '%Мой%' OR name_track LIKE '%My%';
+FROM Tracks 
+WHERE name_track ILIKE 'мой %'
+OR name_track ILIKE '% мой' 
+OR name_track ILIKE '% мой %' 
+OR name_track ILIKE 'мой' 
+OR name_track ILIKE 'my %'
+OR name_track ILIKE '% my'
+OR name_track ILIKE '% my %'
+OR name_track ILIKE 'my';
+
 
 --Задание 3
 
@@ -63,7 +73,6 @@ JOIN Albums ON Tracks.album_ID = Albums.album_ID
 JOIN AlbumArtists ON Albums.album_ID = AlbumArtists.album_ID
 JOIN Artists ON AlbumArtists.artist_ID = Artists.artist_ID
 WHERE name_artist = 'Eminem';
-
 
 
 

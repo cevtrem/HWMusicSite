@@ -16,7 +16,7 @@ VALUES
 (1, 1),
 (2, 2),
 (3, 3),
-(4, 3;
+(4, 3);
 
 INSERT INTO Albums (album_ID, name_album, release_year)
 VALUES
@@ -29,7 +29,7 @@ INSERT INTO Tracks (track_ID, name_track, duration, album_ID)
 VALUES
 (1, 'Roors In My Boots', 197, 1),
 (2, 'Freedom', 188, 2),
-(3, 'Venom', 271, 3)
+(3, 'Venom', 271, 3),
 (4, 'Paul', 35, 3),
 (5, 'Мой стиль', 256, 4),
 (6, 'Моя игра', 325, 4);
